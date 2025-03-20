@@ -1,0 +1,55 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Chat Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Chat Header -->
+    <header>
+        <div class="left-icons">
+            <div class="profile">
+                <img src="profile.png" alt="Profile">
+                <div class="profile-info">
+                    <span class="name">CLR 24/7</span>
+                    <span class="status">5 en ligne</span>
+                </div>
+            </div>
+        </div>
+        <div class="right-icons">
+            <img src="video-call.png" alt="Video Call" width="31.5">
+            <img src="phone-call.png" alt="Phone Call" width="27.5">
+            <img src="options.png" alt="Options" width="34">
+        </div>
+    </header>
+
+    <!-- Message Container -->
+    <div class="message-container" id="messageContainer">
+    <!-- Messages will appear here -->
+    </div>  
+
+    <!-- Typing Indicator -->
+    <div class="typing-indicator" id="typingIndicator">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <footer>
+        <button class="plus-btn">+</button>
+        <input type="text" class="message-input" placeholder="Tapez votre message ici...">
+        <button class="microphone-btn">
+            <img src="micro.png" alt="Microphone Icon" width="37.5">
+        </button>
+    </footer>
+    
+
+</body>
+<script src="main.js"></script>
+</html>
+
+
+
+

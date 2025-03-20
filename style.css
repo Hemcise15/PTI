@@ -1,0 +1,243 @@
+/* Chat header style */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('wallpaper.png');
+}
+
+header {
+    background-color: #075e54;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    z-index: 2006;
+    width: 100%;
+}
+
+header .left-icons {
+    display: flex;
+    align-items: center;
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+}
+
+header .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+header .profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+header .profile-info .name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header .profile-info .status {
+    font-size: 12px;
+}
+
+header .right-icons img {
+    margin-left: 15px;
+    cursor: pointer;
+    mix-blend-mode: multiply;
+    padding-right: 12.5px;
+}
+
+/* Previous styles */
+.message-container {
+    width: 100%; 
+    height: 520px; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px; /* Ajusté pour le header */
+    overflow-y: hidden;
+    max-height: 100%; /* Ajuste la hauteur totale pour ne pas empiéter sur l'indicateur */
+    padding-bottom: 65px; /* Crée un espace pour l'indicateur de saisie */
+    box-sizing: border-box;
+    transition: opacity 0.5s ease-in-out;
+    
+    
+    /*background-size: cover;*/ 
+}
+
+.message {
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px 15px 15px 0;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+    height : 12.5%;
+    min-height : 12.5%;
+}
+
+.incoming {
+    background-color: #e1ffc7;
+    text-align: left;
+}
+
+.exit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    font-family: 'Mickey', sans-serif; /* Style de police évoquant une souris Mickey */
+    text-align: center;
+    position: relative;
+    top: 50%; /* Centré verticalement */
+    left: 50%; /* Centré horizontalement */
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+}
+
+
+/*.outgoing {
+    background-color: #dcf8c6;
+    text-align: right;
+    margin-left: auto;
+}*/
+
+.sender {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.sender-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    }
+
+.read-status {
+    font-size: 10px;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 10px;
+}
+
+.read-status.unread {
+    color: gray;
+}
+
+.read-status.read {
+    color: blue;
+}
+
+.read-check {
+    margin-left: 4px;
+}
+
+/* Typing indicator */
+.typing-indicator {
+    position: absolute;
+    left: 10px; /* Positionne l'indicateur à gauche */
+    bottom: 70px; /* Place l'indicateur au-dessus du footer */
+    width: 7.5%; /* Ajuste la taille pour être plus large */
+    height: 30px;
+    border-radius: 15px 15px 15px 0;
+    background-color: #dcf8c6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    flex-shrink: 0; /* Empêche la réduction de la taille de l'indicateur */
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    margin: 2px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1.5s infinite ease-in-out;
+}
+
+
+@keyframes blink {
+    0% { opacity: 0.2; }
+    20% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+footer {
+    background-color: #075e54;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom:0;
+    z-index: 2006;
+    width: 100%;
+}
+
+footer .plus-btn {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px; /* Arrondir les bords */
+    margin-right: 10px;
+    outline: none;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+}
+
+footer .microphone-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+footer .microphone-btn img {
+    mix-blend-mode: multiply;
+    padding-right: 10px;
+}
